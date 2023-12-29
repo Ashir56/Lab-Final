@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 
 const handleClick = (e) => {
   console.log(e)
+
 }
 
 const Home = () => {
