@@ -1,8 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+export const handleClick = (e) => {
+
+}
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
   try {
-    const response = await fetch('https://emojihub.yurace.pro/api/all');
+    const response = await fetch('https://emojihub.yurace.pro/api/category/');
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`);
     }
@@ -15,7 +18,7 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
   }
 });
 
-const dataSlice = createSlice({
+const categorydetail = createSlice({
   name: 'data',
   initialState: {
     items: [],
@@ -39,4 +42,4 @@ const dataSlice = createSlice({
   },
 });
 
-export default dataSlice.reducer;
+export default categorydetail.reducer;
